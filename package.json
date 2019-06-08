@@ -1,0 +1,24 @@
+{
+  "name": "league-of-legends-api",
+  "version": "1.0.0",
+  "description": "Doing stuff with data from LoL API",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang6020/league-of-legends-api.git"
+  },
+  "author": "Justin Yang, Einer Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yang6020/league-of-legends-api/issues"
+  },
+  "homepage": "https://github.com/yang6020/league-of-legends-api#readme"
+}
