@@ -11,7 +11,7 @@ router.get('/:username', (req, res) => {
       req.params.username
     }?api_key=${config.APIKEY}
     `
-  requestify.get(url).then(function(response) {
+  requestify.get(url).then(response => {
     res.send(response.getBody())
   })
 })
