@@ -4,12 +4,13 @@
   "description": "Doing stuff with data from LoL API",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "requestify": "^0.2.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "test",
-    "start": "node ./src/app.js"
+    "start": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
