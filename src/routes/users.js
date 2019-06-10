@@ -1,7 +1,7 @@
 // Import variables
 const express = require('express')
 const router = express.Router()
-const requestify = require('requestify')
+const request = require('request')
 const config = require('../../config.json')
 
 // Send false if there is no user queried (we will not get every single league user ktnx)
@@ -17,10 +17,9 @@ router.get('/:username', (req, res) => {
       req.params.username
     }?api_key=${config.APIKEY}
     `
-  console.log(url)
-  requestify.get(url).then(response => {
-    if (response) {
-      res.send(response.getBody())
+  request(url, (err, response, body) => {
+    if (response.statusCode === 200) {
+      res.send(body)
     } else {
       res.status(404)
       res.send('Not Found')
